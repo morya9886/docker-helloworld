@@ -1,7 +1,6 @@
 ############################################################
 # Dockerfile to build Nginx Installed Containers
 # Based on Ubuntu
-#sample
 #############################################################
 
 
