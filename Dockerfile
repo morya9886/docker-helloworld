@@ -17,6 +17,7 @@ MAINTAINER Karthik Gaekwad
 
 # Update the repository
 RUN apt-get update
+RUN sudo apt-get upgrade -y
 
 # Install necessary tools
 RUN apt-get install -y vim wget dialog net-tools
