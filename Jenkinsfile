@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'vinod' }
+    agent { label 'jenkins-agent' }
 
     stages {
 
