@@ -19,7 +19,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                dockerBuild('docker-helloworld')
+                dockerbuild('docker-helloworld')
                 // give the new docker image tag here
             }
         }
