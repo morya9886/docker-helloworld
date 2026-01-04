@@ -1,7 +1,15 @@
+@Library ("shared") _
 pipeline {
     agent { label 'vinod' }
 
     stages {
+        stage('echo'){
+            steps {
+                script {
+                    hello ()
+                }
+            }
+        }
 
         stage('Checkout') {
             steps {
