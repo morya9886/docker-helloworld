@@ -28,7 +28,7 @@ pipeline {
             steps {
                 sh '''
                   docker rm -f helloworld || true
-                  docker run -d --name helloworld -p 8081:8081 docker-helloworld
+                  docker run -d --name helloworld -p 8081:80 docker-helloworld
                 '''
             }
         }
