@@ -1,7 +1,10 @@
 @Library ("shared") _
 pipeline {
     agent { label 'slave' }
-
+    environment {
+    IMAGE_NAME = "docker-helloworld" 
+                // provide the new docker image tag here which will be added to the docker image
+}
     stages {
         stage('echo'){
             steps {
@@ -19,10 +22,16 @@ pipeline {
 
         stage('Build') {
             steps {
-                dockerbuild('docker-helloworld')
-                // give the new docker image tag here
+                dockerbuild(IMAGE_NAME)
+
             }
         }
+        stage('push') {
+            steps {
+                dockerpush(IMAGE_NAME)
+
+            }
+        }        
 
         stage('Deploy') {
             steps {
